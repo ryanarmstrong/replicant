@@ -1,4 +1,5 @@
 # Ignore built directories and files.
-vendor
+/bin
+/vendor
 # Ignore IDE files.
 *.sublime-*
