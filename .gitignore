@@ -1,6 +1,7 @@
 # Ignore built directories and files.
 /bin
 /vendor
-/web/index.php
+/web
+!/web/drush/drushrc.php
 # Ignore IDE files.
 *.sublime-*
