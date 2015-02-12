@@ -1,0 +1,39 @@
+{
+    "name": "Replicant",
+    "description": "A Drupal project starting point based on Docker.",
+    "type": "project",
+    "license": "",
+    "authors": [
+        {
+            "name": "Ryan Armstrong",
+            "role": "Owner"
+        }
+    ],
+    "support": {},
+    "require": {
+        "composer/installers": "^1.0.20",
+        "drupal/core": "8.0.*",
+        "drush/drush": "7.0.*"
+    },
+    "require-dev": {
+        "behat/behat": "3.*",
+        "phpspec/phpspec": "~2.0"
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "autoload": {"psr-0": {"": "src"}},
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "post-install-cmd": "scripts/composer/post-install.sh"
+    },
+    "extra": {
+        "installer-paths": {
+            "vendor/drupal/core": ["type:drupal-core"],
+            "web/modules/vendor/{$name}": ["type:drupal-module"],
+            "web/profiles/{$name}": ["type:drupal-profile"],
+            "web/themes/{$name}": ["type:drupal-theme"]
+        }
+    }
+}
